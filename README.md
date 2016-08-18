@@ -1,14 +1,14 @@
 # clj-online
 
-A Clojure library designed to ... well, that part is up to you.
+Library to interact with online.net API.
 
 ## Usage
 
-FIXME
+Import the lib into your project load a token and send request
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright Jean-Baptiste Besselat - Linkfluence SAS © 2016
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
