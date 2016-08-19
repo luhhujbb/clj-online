@@ -30,7 +30,7 @@
 (defmulti call (fn [params] (:method params)))
 
 (defmethod call "GET" [params]
-  (let [url (str endpoint (:ressource params))
+  (let [url (str endpoint (:resource params))
         opts (merge {:headers (mk-headers) :accept :json :as :json} request-conf)]
         (try
           (http/get url opts)
@@ -39,7 +39,7 @@
             {:status 500}))))
 
 (defmethod call "PUT" [params]
-  (let [url (str endpoint (:ressource params))
+  (let [url (str endpoint (:resource params))
         opts (merge {:form-params (:body params) :headers (mk-headers)} request-conf)]
       (try
         (http/post url opts)
@@ -48,7 +48,7 @@
           {:status 500}))))
 
 (defmethod call "POST" [params]
-  (let [url (str endpoint (:ressource params))
+  (let [url (str endpoint (:resource params))
         opts (merge {:form-params (:body params) :headers (mk-headers)} request-conf)]
       (try
         (http/post url opts)
@@ -57,7 +57,7 @@
           {:status 500}))))
 
 (defmethod call "DELETE" [params]
- (let [url (str endpoint (:ressource params))
+ (let [url (str endpoint (:resource params))
        opts (merge {:headers (mk-headers)} request-conf)]
     (try
       (http/delete url opts)
