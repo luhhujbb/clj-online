@@ -1,4 +1,4 @@
-(defproject clj-online "0.1.0"
+(defproject luhhujbb/online "0.1.0"
   :description "A tiny clojure wrapper for online.net API"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
